@@ -1,0 +1,3 @@
+io.streamthoughts.azkarra.extensions.endpoints.ComponentsJarUploadEndpoint$ComponentsJarUploadEndpointExtension
+io.streamthoughts.azkarra.extensions.endpoints.TopologyJarDownloadEndpoint$TopologyJarDownloadEndpointExtension
+io.streamthoughts.azkarra.extensions.endpoints.MultiPartFeatureExtension

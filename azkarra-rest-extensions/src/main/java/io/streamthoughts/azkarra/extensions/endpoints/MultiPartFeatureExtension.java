@@ -16,18 +16,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.streamthoughts.azkarra.streams.components.scan.secondary;
 
-import io.streamthoughts.azkarra.api.annotations.Component;
-import io.streamthoughts.azkarra.api.annotations.Secondary;
-import io.streamthoughts.azkarra.streams.components.ReflectiveComponentScannerTest;
+package io.streamthoughts.azkarra.extensions.endpoints;
 
-/**
- * Class used for testing purpose.
- * @see ReflectiveComponentScannerTest
- */
-@Component
-@Secondary
-public class TestSecondaryComponent {
+import io.streamthoughts.azkarra.api.server.AzkarraRestExtension;
+import io.streamthoughts.azkarra.api.server.AzkarraRestExtensionContext;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
 
+public class MultiPartFeatureExtension implements AzkarraRestExtension {
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void register(final AzkarraRestExtensionContext restContext) {
+        restContext.configurable().register(MultiPartFeature.class);
+    }
 }
